@@ -8,6 +8,9 @@ const {
 } = require("./Controller/product.controller");
 const router = express.Router();
 
+router.get("/",(req,res)=>{
+    res.render("index", { Title: "application", prods: "" });
+});
 
 router.get("/addproduct", (req, res) => {
     res.render("add");
